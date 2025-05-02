@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon Lintree</title>
+
+  <!-- Police Google : Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #FFD7E4 0%, #E3D4FB 50%, #C4F0E8 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        color: azure;
+        flex-direction: column;
+        padding-top: auto;
+        margin: auto;
+        text-shadow: #0e0d0d;
+
+    }
+    .text  p {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        text-shadow: #0e0d0d;
+    }
+    .text  h1 {
+        margin: 0;
+        padding: 0;
+        text-shadow: #333;
+    }
+
+    .profile-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      object-fit: cover;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    .link-list li {
+      margin: 10px 0;
+    }
+
+    .link-list a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background-color: #F6F9FF;
+      color: #333;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .link-list a i {
+      font-size: 1.2em;
+    }
+
+    .link-list a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 10px;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .link-list a {
+        font-size: 0.9em;
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="samba-seck-contactez-moi.png" alt="Photo de profil" class="profile-photo">
+    <div class="text">
+     <h1>Samba <strong>SECK</strong></h1><br>
+
+     <p>Référent Digital</p>
+    </div>
+    <ul class="link-list">
+      <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://wa.me/221771234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      <li><a href="mailto:contact@exemple.com"><i class="fas fa-envelope"></i> Email</a></li>
+    </ul>
+  </div>
+</body>
+</html>
