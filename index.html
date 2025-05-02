@@ -2,137 +2,145 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon Lintree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samba SECK | Référent Digital</title>
 
-  <!-- Police Google : Poppins -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome pour les icônes -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
-    body {
+    :root {
+      --bg: linear-gradient(135deg, #fceff9, #e0f7fa);
+      --white: #fff;
+      --text: #2d2d2d;
+      --accent: #7e57c2;
+      --whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #FFD7E4 0%, #E3D4FB 50%, #C4F0E8 100%);
-      min-height: 100vh;
+      background: var(--bg);
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      max-width: 500px;
       width: 100%;
-      max-width: 480px;
-    }
-
-    .text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Segoe UI', sans-serif;
-        color: azure;
-        flex-direction: column;
-        padding-top: auto;
-        margin: auto;
-        text-shadow: #0e0d0d;
-
-    }
-    .text  p {
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        text-shadow: #0e0d0d;
-    }
-    .text  h1 {
-        margin: 0;
-        padding: 0;
-        text-shadow: #333;
+      text-align: center;
     }
 
     .profile-photo {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 3px solid #FFFFFF;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
       object-fit: cover;
+      box-shadow: 0 0 0 4px #fff, 0 4px 20px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
     }
 
-    .link-list {
-      list-style: none;
-      padding: 0;
+    h1 {
+      font-size: 1.8rem;
+      color: var(--text);
+    }
+
+    .status {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .desc {
       margin: 20px 0;
-      width: 100%;
+      font-size: 0.95rem;
+      color: #555;
     }
 
-    .link-list li {
-      margin: 10px 0;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    .link-list a {
+    .links a {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 12px 20px;
-      background-color: #F6F9FF;
-      color: #333;
-      text-decoration: none;
+      padding: 14px;
       border-radius: 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      text-decoration: none;
       font-weight: 600;
+      color: var(--text);
+      background-color: #f3f4f6;
+      transition: all 0.3s ease;
     }
 
-    .link-list a i {
-      font-size: 1.2em;
+    .links a i {
+      margin-right: 10px;
+      font-size: 1.2rem;
     }
 
-    .link-list a:hover {
+    .links a:hover {
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px 10px;
-      }
+    .whatsapp {
+      animation: pulse 1.2s infinite;
+      background-color: var(--whatsapp);
+      color: rgba(22, 194, 85, 0.795) !important;
+    }
 
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    @media screen and (max-width: 500px) {
+      .card {
+        padding: 30px 20px;
+      }
       .profile-photo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
       }
-
-      .link-list a {
-        font-size: 0.9em;
-        padding: 10px 15px;
+      h1 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="samba-seck-contactez-moi.png" alt="Photo de profil" class="profile-photo">
-    <div class="text">
-     <h1>Samba <strong>SECK</strong></h1><br>
+  <div class="card">
+    <img src="samba-seck-contactez-moi.png" alt="Samba SECK" class="profile-photo">
+    <h1>Samba <strong>SECK</strong></h1>
+    <p class="status">Référent Digital | Community Manager | Social Media Manager</p>
+    <p class="desc">Je vous accompagne dans la création de votre visibilité digitale, de votre stratégie à vos contenus. Let’s level up ! 🚀</p>
 
-     <p>Référent Digital</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/samba-seck" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+      <a href="https://www.portfolio.com/samba-seck" target="_blank"><i class="fas fa-briefcase"></i>Portofolio</a>
+      <a href="mailto:contact@sambaseck.com"><i class="fas fa-envelope"></i>Email</a>
+      <a href="https://wa.me/221771234567" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+      <a href="tel:+221771234567"><i class="fas fa-phone"></i>Appel direct</a>
     </div>
-    <ul class="link-list">
-      <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-      <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-      <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-      <li><a href="https://wa.me/221771234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-      <li><a href="mailto:contact@exemple.com"><i class="fas fa-envelope"></i> Email</a></li>
-    </ul>
   </div>
 </body>
 </html>
